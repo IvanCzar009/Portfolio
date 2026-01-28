@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Briefcase, Mail, Linkedin, Github, Award, BookOpen, Users, Code, FileCode, Blocks, Smartphone, Server, Database, Brain, Cpu, Bot, Eye, GitBranch, Container, Cloud, Layers } from 'lucide-react';
+import { ArrowRight, Briefcase, Mail, Linkedin, Github, Instagram, Award, BookOpen, Users, Code, FileCode, Blocks, Smartphone, Server, Database, Brain, Cpu, Bot, Eye, GitBranch, Container, Cloud, Layers } from 'lucide-react';
 import ProfileImage from '@/components/ui/Profile.jpg';
 
 export default function Home() {
@@ -152,14 +152,15 @@ export default function Home() {
                   <Github className="w-5 h-5" />
                 </a>
 
-                <Button
-                  variant="outline"
-                  size="icon"
-                  className="rounded-full border-gray-200 hover:bg-indigo-50 hover:border-indigo-200 hover:text-indigo-600 transition-all"
-                  aria-label="Email (standby)"
+                <a
+                  href="https://www.instagram.com/ilumanglas/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="inline-flex items-center justify-center rounded-full border border-gray-200 p-2 hover:bg-indigo-50 hover:border-indigo-200 hover:text-indigo-600 transition-all"
                 >
-                  <Mail className="w-5 h-5" />
-                </Button>
+                  <Instagram className="w-5 h-5" />
+                </a>
               </div>
             </div>
           </div>
