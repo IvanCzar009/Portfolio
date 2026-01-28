@@ -64,15 +64,15 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-indigo-950 via-violet-900 to-purple-900 text-white py-24 md:py-32 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-indigo-950 via-violet-900 to-purple-900 text-white py-20 md:py-28 overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-indigo-500/20 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-violet-500/20 rounded-full blur-3xl"></div>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
         </div>
-        <div className="max-w-6xl mx-auto px-6 relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-5xl mx-auto px-6 relative z-10">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <Badge className="bg-white/10 text-indigo-200 border border-indigo-400/30 mb-6 backdrop-blur-sm">
                 <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse inline-block"></span>
@@ -97,11 +97,11 @@ export default function Home() {
             <div className="hidden md:flex justify-center">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-violet-500 rounded-full blur-2xl opacity-40 animate-pulse"></div>
-                <div className="w-72 h-72 lg:w-80 lg:h-80 rounded-full bg-gradient-to-br from-indigo-500 to-violet-600 p-1 relative">
-                  <img 
+                <div className="w-64 h-64 lg:w-72 lg:h-72 rounded-full bg-gradient-to-br from-indigo-500 to-violet-600 p-0 relative">
+                  <img
                     src={ProfileImage}
                     alt="Profile"
-                    className="w-full h-full rounded-full object-cover"
+                    className="w-full h-full rounded-full object-cover border-4 border-indigo-600/30 shadow-lg"
                   />
                 </div>
               </div>
