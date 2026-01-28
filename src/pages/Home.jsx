@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Briefcase, Mail, Linkedin, Github, Award, BookOpen, Users, Code, FileCode, Blocks, Smartphone, Server, Database, Brain, Cpu, Bot, Eye, GitBranch, Container, Cloud, Layers } from 'lucide-react';
+import ProfileImage from '@/components/ui/Profile.jpg';
 
 export default function Home() {
   const skills = [
@@ -103,7 +104,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-violet-500 rounded-full blur-2xl opacity-40 animate-pulse"></div>
                 <div className="w-72 h-72 lg:w-80 lg:h-80 rounded-full bg-gradient-to-br from-indigo-500 to-violet-600 p-1 relative">
                   <img 
-                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face" 
+                    src={ProfileImage}
                     alt="Profile"
                     className="w-full h-full rounded-full object-cover"
                   />
