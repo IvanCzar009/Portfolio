@@ -56,10 +56,6 @@ export default function Home() {
             <a href="#skills" className="text-gray-600 hover:text-indigo-600 transition-colors font-medium">Skills</a>
             <a href="#contact" className="text-gray-600 hover:text-indigo-600 transition-colors font-medium">Contact</a>
           </div>
-          <Button className="bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 shadow-lg shadow-indigo-500/25">
-            <Mail className="w-4 h-4 mr-2" />
-            Get in Touch
-          </Button>
         </div>
       </nav>
 
