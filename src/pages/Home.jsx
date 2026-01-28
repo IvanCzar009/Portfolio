@@ -54,7 +54,7 @@ export default function Home() {
       {/* Navigation */}
       <nav className="bg-white/80 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-          <span className="text-xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Ivan Czar</span>
+          <span className="text-xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Portfolio</span>
           <div className="hidden md:flex items-center gap-8">
             <a href="#about" className="text-gray-600 hover:text-indigo-600 transition-colors font-medium">About</a>
             <a href="#experience" className="text-gray-600 hover:text-indigo-600 transition-colors font-medium">Experience</a>
@@ -84,7 +84,7 @@ export default function Home() {
                 Available for Opportunities
               </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                Software Engineer <span className="bg-gradient-to-r from-indigo-400 to-violet-400 bg-clip-text text-transparent">&</span> AI Specialist
+                Ivan Czar P. Lumanglas
               </h1>
               <p className="text-lg text-indigo-100/80 mb-8 leading-relaxed">
                 Building innovative web and mobile applications powered by artificial intelligence and machine learning solutions.
