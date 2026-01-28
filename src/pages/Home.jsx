@@ -37,16 +37,11 @@ export default function Home() {
     },
     {
       role: "Customer Service Representative",
-      company: "SiriusXM",
-      period: "Previous",
-      description: "Handled clients in Telecommunications Accounts and Sales Account, developing strong communication and problem-solving skills."
+      company: "ResultsCX",
+      period: "Nov 2024 - Mar 2025",
+      description: "I was a results-driven Customer Service Representative with experience in Telco and Sales accounts, handling billing, technical support, retention, and upselling. I bring strong communication skills, CRM proficiency, and a customer-first approach to deliver efficient support while driving sales and customer satisfaction."
     },
-    {
-      role: "Bachelor's Degree in Computer Engineering",
-      company: "Batangas State University",
-      period: "Graduate",
-      description: "Completed comprehensive studies in computer engineering fundamentals, programming, and systems design."
-    }
+
   ];
 
   return (
