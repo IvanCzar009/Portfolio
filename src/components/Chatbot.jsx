@@ -27,20 +27,6 @@ const Chatbot = () => {
     scrollToBottom();
   }, [messages]);
 
-  const systemPrompt = `You are a friendly and engaging portfolio assistant for a web developer's portfolio website. Your role is to:
-1. Answer frequently asked questions about the developer's services, skills, and projects
-2. Help collect visitor information (name, email, interest areas) in a conversational way
-3. Provide entertainment through interesting conversations
-4. Be helpful, professional, and engaging
-
-Portfolio Information:
-- The developer is skilled in React, JavaScript, Web Development, UI/UX design
-- They work with modern tech stack: React, Tailwind CSS, Vite
-- Available for freelance projects and consultations
-- Services include: Web Development, UI Component Design, Frontend Architecture
-
-When collecting information, do it naturally in conversation, not like a form. Be conversational and friendly. Keep responses concise (2-3 sentences max) and engaging.`;
-
   const handleSendMessage = async (e) => {
     e.preventDefault();
     if (!inputValue.trim()) return;
@@ -58,47 +44,35 @@ When collecting information, do it naturally in conversation, not like a form. B
 
     try {
       const response = await axios.post(
-        'https://api.openai.com/v1/chat/completions',
+        'http://localhost:5000/api/chat',
         {
-          model: 'gpt-3.5-turbo',
-          messages: [
-            {
-              role: 'system',
-              content: systemPrompt,
-            },
-            ...messages.map((msg) => ({
-              role: msg.sender === 'user' ? 'user' : 'assistant',
-              content: msg.text,
-            })),
-            {
-              role: 'user',
-              content: inputValue,
-            },
-          ],
-          temperature: 0.7,
-          max_tokens: 150,
-        },
-        {
-          headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`,
-          },
+          messages: [...messages, userMessage],
         }
       );
 
       const botMessage = {
         id: messages.length + 2,
-        text: response.data.choices[0].message.content,
+        text: response.data.message,
         sender: 'bot',
         timestamp: new Date(),
       };
 
-      setMessages((prev) => [...prev, userMessage, botMessage]);
+      setMessages((prev) => [...prev, botMessage]);
     } catch (error) {
       console.error('Error:', error);
+      let errorText = 'Sorry, I encountered an error. ';
+      
+      if (error.response?.status === 401) {
+        errorText += 'The OpenAI API key is invalid.';
+      } else if (error.code === 'ECONNREFUSED') {
+        errorText += 'The chat server is not running. Start it with "npm run server".';
+      } else {
+        errorText += 'Please check the console for details.';
+      }
+
       const errorMessage = {
         id: messages.length + 2,
-        text: "Sorry, I encountered an error. Please make sure your OpenAI API key is configured correctly. Check the console for details.",
+        text: errorText,
         sender: 'bot',
         timestamp: new Date(),
       };
