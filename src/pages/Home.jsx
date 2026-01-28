@@ -214,10 +214,10 @@ export default function Home() {
             Ready to bring your ideas to life with cutting-edge technology? I'd love to hear about your project and discuss how I can help.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-indigo-900 hover:bg-indigo-50 shadow-xl shadow-white/10">
-              <Mail className="w-4 h-4 mr-2" />
-              contact@ivanlumanglas.com
-            </Button>
+                <Button size="lg" className="bg-white text-indigo-900 hover:bg-indigo-50 shadow-xl shadow-white/10">
+                  <Mail className="w-4 h-4 mr-2" />
+                  ivanczarlumanglas486@gmail.com
+                </Button>
             <Button size="lg" variant="outline" className="border-indigo-400/50 text-white hover:bg-white/10 backdrop-blur-sm">
               Schedule a Call
             </Button>
