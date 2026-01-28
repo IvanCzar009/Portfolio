@@ -48,13 +48,6 @@ export default function Home() {
     }
   ];
 
-  const stats = [
-    { icon: Briefcase, value: "50+", label: "Projects Completed" },
-    { icon: Users, value: "30+", label: "Happy Clients" },
-    { icon: Award, value: "8+", label: "Years Experience" },
-    { icon: BookOpen, value: "15+", label: "Publications" }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Navigation */}
@@ -117,23 +110,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 bg-white border-b border-gray-100">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-50 to-violet-50 mb-4 group-hover:scale-110 transition-transform">
-                  <stat.icon className="w-6 h-6 text-indigo-600" />
-                </div>
-                <div className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent mb-1">{stat.value}</div>
-                <div className="text-gray-500">{stat.label}</div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
