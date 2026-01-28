@@ -132,13 +132,32 @@ export default function Home() {
                 My journey started in customer service at SiriusXM, where I honed my communication and problem-solving skills. Now, I specialize in developing web and mobile applications integrated with AI and machine learning technologies.
               </p>
               <div className="flex gap-3">
-                <Button variant="outline" size="icon" className="rounded-full border-gray-200 hover:bg-indigo-50 hover:border-indigo-200 hover:text-indigo-600 transition-all">
+                <a
+                  href="https://www.linkedin.com/in/ivan-czar-lumanglas-46082528a"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="inline-flex items-center justify-center rounded-full border border-gray-200 p-2 hover:bg-indigo-50 hover:border-indigo-200 hover:text-indigo-600 transition-all"
+                >
                   <Linkedin className="w-5 h-5" />
-                </Button>
-                <Button variant="outline" size="icon" className="rounded-full border-gray-200 hover:bg-indigo-50 hover:border-indigo-200 hover:text-indigo-600 transition-all">
+                </a>
+
+                <a
+                  href="https://github.com/IvanCzar009"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                  className="inline-flex items-center justify-center rounded-full border border-gray-200 p-2 hover:bg-indigo-50 hover:border-indigo-200 hover:text-indigo-600 transition-all"
+                >
                   <Github className="w-5 h-5" />
-                </Button>
-                <Button variant="outline" size="icon" className="rounded-full border-gray-200 hover:bg-indigo-50 hover:border-indigo-200 hover:text-indigo-600 transition-all">
+                </a>
+
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="rounded-full border-gray-200 hover:bg-indigo-50 hover:border-indigo-200 hover:text-indigo-600 transition-all"
+                  aria-label="Email (standby)"
+                >
                   <Mail className="w-5 h-5" />
                 </Button>
               </div>
